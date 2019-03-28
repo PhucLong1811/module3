@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+	.list
+	{
+		border: 1px solid black;
+	}
+	.list ul li 
+	{
+		font-weight: bold;
+		font-size: 15px;
+		margin-left: -35px;
+		margin-top: 10px;
+		color: #000;
+	}
+	.list ul li a
+	{
+		
+		color: #000;
+	}
+	
+</style>
+<body>
+	<div class="container">
+		<nav class="navbar" >
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span> Trang chủ</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Giới thiệu</a></li>
+						<li class="active"><a href="jquery.html"><span class="glyphicon glyphicon-list-alt"></span> Jquery</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-earphone"></span> Liên hệ</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Góp ý</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Hỏi đáp</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Tài khoản<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">One more separated link</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><span class="fa fa-search"></span></a></li>
+						<li><a href="#"><span class="fa fa-shopping-cart"></span></a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">EN <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">English</a></li>
+								<li><a href="#">Việt Nam</a></li>
+								<li role="separator" class="divider"></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+	</div>
+	<div class="container" >
+		<img src="../css/slider.png" alt="" width="100%">
+	</div>
+	<div class="container" style="margin-top: 30px;">
+		<div class="row text-center">
+			<div class="col-md-2"><span class="fa fa-square-o"></span> New Surface Go</div>
+			<div class="col-md-2"> <span class="fa fa-laptop"></span> New Surface Laptop 2</div>
+			<div class="col-md-2"><span class="fa  fa-credit-card"></span> New Surface Pro 6</div>
+			<div class="col-md-2"><span class="fa fa-clone"></span> Surface Book 2</div>
+			<div class="col-md-2"> <span class="fa  fa-desktop"></span> New Surface Studio 2</div>
+			<div class="col-md-2"><span class="fa fa-id-card"></span> Deals</div>
+		</div>
+	</div>
+	<div class="container" style="margin-top: 20px;">
+		<div class="row">
+			<div class="col-sm-3 list">
+				<div class="col-sm-12 " style="background: #ccc; border-radius: 5px;">
+					<h3><span class="glyphicon glyphicon-list"></span> Danh Mục</h3>
+				</div>
+				<div class="col-sm-12 ">
+					<ul>
+						<li><a href="#Find">Find()</a></li>
+						<li><a href="#Hide">Hide()</a></li>
+						<li><a href="#Toggle">Toggle()</a></li>
+						<li><a href="#Show">Show()</a></li>
+						<li><a href="#Animate">Animate()</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-9">
+				<div class="col-sm-12">
+					<h3 id="Find">Find()</h3>
+					<p>Get the descendants of each element in the current set of matched elements, filtered by a selector, jQuery object, or element.</p>
+					<li>Cú pháp</li>
+
+					<li>Demo</li>
+					<img src="image/Capture.PNG" alt="" width="100%">
+				</div>
+				<div class="col-sm-12">
+					<h3 id="Hide">Hide()</h3>
+					<p>Phương thức hide () ẩn các phần tử được chọn.</p>
+					<li>Cú Pháp</li>
+					<p>$(selector).hide(speed,easing,callback)</p>
+					<li>Trong đó</li>
+					<p>speed : là chỉ định tốc độ của hiệu ứng ẩn. Giá trị mặc định là 400 mili giây</p>
+					<p>easing : là chỉ định tốc độ của phần tử trong các điểm khác nhau của hình ảnh động. Giá trị mặc định là "swing"</p>
+					<p>callback : là một hàm được thực thi sau khi phương thức hide () hoàn thành</p>
+					<li>demo</li>
+					<img src="image/1.PNG" alt="" width="100%">
+				</div>
+				<div class="col-sm-12">
+					<h3 id="Toggle">Toggle()</h3>
+					<p>Phương thức toggle () chuyển đổi giữa hide () và show () cho các phần tử được chọn.</p>
+					<li>Cú Pháp</li>
+					<p>$(selector).toggle(speed,easing,callback)</p>
+					<li>Trong đó</li>
+					<p>speed : là chỉ định tốc độ của hiệu ứng ẩn / hiển thị</p>
+					<p>easing : là chỉ định tốc độ của phần tử trong các điểm khác nhau của hình ảnh động. Giá trị mặc định là "swing"</p>
+					<p>callback : là một hàm được thực thi sau khi phương thức toggle () hoàn thành</p>
+					<li>demo</li>
+					<img src="image/2.PNG" alt="" width="100%">
+				</div>
+				<div class="col-sm-12">
+					<h3 id="Show">Show()</h3>
+					<p>Phương thức show () hiển thị các phần tử ẩn, được chọn.</p>
+					<li>Cú Pháp</li>
+					<p>$(selector).show(speed,easing,callback)</p>
+					<li>Trong đó</li>
+					<p>speed : là chỉ định tốc độ của hiệu ứng ẩn. Giá trị mặc định là 400 mili giây</p>
+					<p>easing : là chỉ định tốc độ của phần tử trong các điểm khác nhau của hình ảnh động. Giá trị mặc định là "swing"</p>
+					<p>callback : là một hàm được thực thi sau khi phương thức show() hoàn thành</p>
+					<li>demo</li>
+					<img src="image/3.PNG" alt="" width="100%">
+				</div>>
+				<div class="col-sm-12">
+					<h3 id="Animate">Animate()</h3>
+					<p>Phương thức animate () thực hiện một hình ảnh động tùy chỉnh của một tập các thuộc tính CSS.</p>
+					<li>Cú Pháp</li>
+					<p>$(selector).animate({styles},speed,easing,callback)</p>
+					<li>Trong đó</li>
+					<p>styles : là ần thiết. Chỉ định một hoặc nhiều thuộc tính / giá trị CSS để tạo hiệu ứng.</p>
+					<p>speed : là chỉ định tốc độ của hiệu ứng ẩn. Giá trị mặc định là 400 mili giây</p>
+					<p>easing : là chỉ định tốc độ của phần tử trong các điểm khác nhau của hình ảnh động. Giá trị mặc định là "swing"</p>
+					<p>callback : là một chức năng sẽ được thực hiện sau khi hoạt ảnh hoàn thành. Để tìm hiểu thêm về gọi lại, vui lòng đọc chương Gọi lại jQuery của chúng tôi</p>
+					<li>demo</li>
+					<img src="image/4.PNG" alt="" width="100%">
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+	
+</body>
+</html>
