@@ -8,6 +8,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { FontSizeEditorComponent } from './font-size-editor/font-size-editor.component';
 import { PetComponent } from './pet/pet.component';
+import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
+import { NameCardComponent } from './name-card/name-card.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { PetComponent } from './pet/pet.component';
     ProfileComponent,
     CalculatorComponent,
     FontSizeEditorComponent,
-    PetComponent
+    PetComponent,
+    CountdownTimerComponent,
+    NameCardComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,

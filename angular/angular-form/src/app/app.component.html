@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1 class="text-center">
+    User profile form of {{ title }}!
+  </h1>
+</div>
+<div class="container mt-4">
+  <a [routerLink]="[ 'register' ]" routerLinkActive="active">registe</a><br>
+  <a [routerLink]="[ 'template-driven-form' ]" routerLinkActive="active">form</a><br>
+  <a [routerLink]="[ 'todo' ]" routerLinkActive="active">todo</a>
+</div>
+<section>
+  <router-outlet></router-outlet>
+  
+</section>

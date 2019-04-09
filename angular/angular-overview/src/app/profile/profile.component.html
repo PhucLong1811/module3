@@ -1,8 +1,8 @@
-<h2>Awesome Calculator</h2>
+<h2>profile</h2>
 <div>
   <p><input type="text" class="form-input" [(ngModel)]="name"></p>
   <p><input type="number" class="form-input" [(ngModel)]="age"></p>
-  <p><input type="text" class="form-input" [(ngModel)]="email"></p>
+  <p><input type="email" class="form-input" [(ngModel)]="email"></p>
   <p>
     <select class="form-input" [(ngModel)]="gender">
       <option value="nam">nam</option>
@@ -18,10 +18,9 @@
   </button>
 </div>
 <div class="output">
-  <p>{{this.name}}</p> 
-  <p>{{this.age}}</p> 
-  <p>{{this.email}}</p> 
-  <p>{{this.gender}}</p> 
-  <br>
-  {{output}}
+  <p>{{output[0]}}</p> 
+  <p>{{output[1]}}</p> 
+  <p>{{output[2]}}</p> 
+  <p>{{output[3]}}</p> 
+  
 </div>

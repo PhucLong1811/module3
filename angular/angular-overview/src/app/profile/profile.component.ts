@@ -17,6 +17,6 @@ export class ProfileComponent implements OnInit {
   age: number;
   email:string;
   showprofile(){
-    return this.output = `name: ${this.name}  gender: ${this.gender} age: ${this.age} email: ${this.email}`;
+    return this.output = [this.name,this.age,this.gender,this.email];
   };
 }

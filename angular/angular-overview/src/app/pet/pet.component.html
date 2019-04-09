@@ -10,12 +10,12 @@
 </label>
 <br >
 <h3>Pet name: {{petName}} {{this.updateName}}</h3>
-<img [src]="petImage" style="max-width: 100%">
+<img [src]="petImage" style="max-width: 10%">
 
 <h2>Color Picker</h2>
 <div>
   <label>Chọn màu:</label>
-  <input [value]="background" type="color" (change)="onChange($event.target.value)">
+  <input  type="color" [value]="background" (change)="onChange($event.target.value)">
 </div>
 
 <p>Output:</p>

@@ -14,12 +14,13 @@ export class PetComponent implements OnInit {
   updateImage(image) {
     this.petImage = image;
   }
+  
   constructor() { }
   background = '#ccc';
   onChange(value) {
     this.background = value;
   }
-  
+
 
   ngOnInit() {
   }
