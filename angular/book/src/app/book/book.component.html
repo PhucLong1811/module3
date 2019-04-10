@@ -1,0 +1,24 @@
+<div *ngIf="showForm">
+  <input type="text" class="form-control" [(ngModel)]="newEN" placeholder="English"><br>
+  <input type="text" class="form-control" [(ngModel)]="newVN" placeholder="Vietnamese"><br>
+  <button (click)="addWord();">Thêm</button>
+</div>
+<button (click)="showForm = true" *ngIf="!showForm">Thêm</button>
+<table class="" border="1px;">
+  <thead>
+    <tr>
+      <th>EN</th>
+      <th>VN</th>
+      <th>Xóa</th>
+      <th>Show</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let word of arrWorks">
+    <tr [ngStyle]="{color:word.memorized ? 'green' : 'red'}">
+      <td>{{ word.en }}</td>
+      <td>{{ word.vn }}</td>
+      <td><button (click)="delete(word.id)">xóa</button></td>
+      <td><button (click)="show(word.id)">Show</button></td>
+    </tr>
+  </tbody>
+</table>
