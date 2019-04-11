@@ -1,0 +1,11 @@
+<nav class="nav justify-content-center bg-light">
+  <a class="nav-link active" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+  <a class="nav-link" [routerLink]="['/courses']"  routerLinkActive="active">Courses</a>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
