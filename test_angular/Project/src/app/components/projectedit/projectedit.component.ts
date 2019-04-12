@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@ANGULAR/forms'
 import { Project } from 'src/app/modules/project.model';
 import { Params, Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ProjectService } from 'src/app/service/project.service';
+
 
 @Component({
   selector: 'app-projectedit',
@@ -14,13 +16,16 @@ export class ProjecteditComponent implements OnInit {
   public projects: Project;
   public subscription: Subscription;
   public subscriptionParams: Subscription;
+  public projectForm: FormGroup
+  
 
 
   constructor
     (
       public projectService: ProjectService,
       public routerService: Router,
-      public activatedRouteService: ActivatedRoute
+      public activatedRouteService: ActivatedRoute,
+      public formBuilder : FormBuilder
     ) { }
 
   ngOnInit() {
@@ -39,7 +44,7 @@ export class ProjecteditComponent implements OnInit {
 
   onEdit() {
     this.subscriptionParams = this.projectService.updateProject(this.projects).subscribe((data: Project) => {
-      this.routerService.navigateByUrl('Project');
+      this.routerService.navigate(['/']);
     });
   }
 }

@@ -1,0 +1,34 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Angular",
+      "description": "hack não",
+      "fee": 0
+    },
+    {
+      "id": 2,
+      "name": "Androiddisajdisadjasiodjsaiodjsaoidjsaodi",
+      "description": "Eschweiler",
+      "fee": 0
+    },
+    {
+      "name": "PHP",
+      "description": "back-end",
+      "fee": 50,
+      "id": 5
+    },
+    {
+      "name": "scsacasc",
+      "description": "asdqdqwdwqfq",
+      "fee": 12,
+      "id": 6
+    },
+    {
+      "name": "sacsac",
+      "description": "13213",
+      "fee": 321414,
+      "id": 7
+    }
+  ]
+}

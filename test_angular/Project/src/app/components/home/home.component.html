@@ -5,6 +5,7 @@
         <h3 class="panel-title">Project Open</h3>
       </div>
       <div class="panel-body container">
+        <input type="text" class="form-control" [(ngModel)]="searchValue" placeholder="SEARCH">
         <table class="table table-light" style="margin-top: 10px; max-width: 100%;">
           <thead class="thead-dark">
             <tr>
@@ -16,8 +17,8 @@
     
             </tr>
           </thead>
-          <tbody>
-            <tr *ngFor= "let project of projects; let i = index">
+          <tbody *ngFor= "let project of projects; let i = index">
+            <tr  *ngIf="onSearch(project)">
               <td class="text-center">{{ i+1 }}</td>
               <td class="text-center">
                 {{ project.title }}

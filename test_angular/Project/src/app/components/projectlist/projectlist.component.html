@@ -10,18 +10,18 @@
           <th class="text-center">Title</th>
           <th class="text-center">Content</th>
           <th class="text-center">Status</th>
-          <th colspan="3" class="text-center">Action</th>
+          <th colspan="2" class="text-center">Action</th>
 
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let project of projects; let i = index">
+        <tr *ngFor="let project of projects; let i = index" ng-repeat="roll in sushi | orderBy:sortType:sortReverse | filter:searchName">
           <td class="text-center">{{ i+1 }}</td>
           <td class="text-center">
             {{ project.title }}
           </td>
           <td>
-            <p style="max-width: 550px; word-wrap:break-word; text-align: center">{{ project.content }}</p>
+            <p style="width: 400px; word-wrap:break-word;">{{ project.content }}</p>
           </td>
           <td class="text-center">
             {{ project.status ? "đã làm" : "chưa làm" }}

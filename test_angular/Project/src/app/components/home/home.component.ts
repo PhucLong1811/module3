@@ -8,9 +8,12 @@ import { ProjectService } from 'src/app/service/project.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
   public subscription = Subscription;
   public projects: Project[] = [];
+  public searchValue= '';
+
   constructor(public projectService: ProjectService) { }
 
   ngOnInit() {
@@ -25,6 +28,7 @@ export class HomeComponent implements OnInit {
       this.updateDataAfterdelete(id);
     });
   }
+
   updateDataAfterdelete(id: number) {
     for (var i = 0; i < this.projects.length; i++) {
       if (this.projects[i].id == id) {
@@ -33,10 +37,15 @@ export class HomeComponent implements OnInit {
       }
     }
   }
+  
   onProject(project) {
     project.status = true;
     this.projectService.updateProject(project).subscribe((data: Project) => {
       this.projects = this.projects.filter(t => t.id !== data.id)
     })
+  }
+
+  onSearch(project:Project){
+    return project.title.toLowerCase().includes(this.searchValue.toLowerCase());
   }
 }

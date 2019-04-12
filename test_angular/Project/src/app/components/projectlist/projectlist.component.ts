@@ -9,12 +9,13 @@ import { formatDate } from '@angular/common';
   templateUrl: './projectlist.component.html',
   styleUrls: ['./projectlist.component.css']
 })
-export class ProjectlistComponent implements OnInit {
 
+export class ProjectlistComponent implements OnInit {
   today = new Date();
   jstoday = '';
   public subscription = Subscription;
   public projects: Project[] = [];
+
   constructor(public projectService: ProjectService) {
     this.jstoday = formatDate(this.today, 'dd-MM-yyyy hh:mm:ss a', 'en-US', '+0530');
    }
@@ -34,6 +35,7 @@ export class ProjectlistComponent implements OnInit {
       this.updateDataAfterdelete(id);
     });
   }
+
   updateDataAfterdelete(id: number) {
     for (var i = 0; i < this.projects.length; i++) {
       if (this.projects[i].id == id) {
@@ -42,6 +44,7 @@ export class ProjectlistComponent implements OnInit {
       }
     }
   }
+  
   onProject(project) {
     project.finishdate = this.jstoday; 
     project.status = true;

@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   templateUrl: './projectadd.component.html',
   styleUrls: ['./projectadd.component.css']
 })
+
 export class ProjectaddComponent implements OnInit {
 
   public project = Project;
@@ -22,17 +23,17 @@ export class ProjectaddComponent implements OnInit {
   ngOnInit() {
     this.projectForm = this.formBuilder.group({
       title: ['', [Validators.required, Validators.minLength(2)]],
-      content: ['', [Validators.required, Validators.maxLength(20)]],
+      content: ['', [Validators.required, Validators.minLength(10)]],
       status:[false]
     })
   }
+
   onAdd(){
     this.projectService.addProject(this.projectForm.value).subscribe( data => {
-     if(data)
+     if(data && data.id)
      {
-       this.routerService.navigate(['Project']);
+      this.routerService.navigate(['list']);
      }
    });
  }
-
 }
