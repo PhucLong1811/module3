@@ -3,11 +3,11 @@
   <div class="form-group">
     <label for="">Title</label>
     <input type="text" class="form-control" formControlName="title" name="title" required>
-    <div style="font-size:14px" class="alert alert-danger" role="alert"
+    <div style="font-size:14px" class="badge badge-danger" role="alert"
       *ngIf="projectForm.hasError('required','title') && projectForm.get('title').touched">
       title: Không được để trống
     </div>
-    <div style="font-size:14px" class="alert alert-danger" role="alert"
+    <div style="font-size:14px" class="badge badge-danger" role="alert"
       *ngIf="projectForm.hasError('minlength','title') && projectForm.get('title').touched">
       title: Phải có ít nhất 2 ký tự
     </div>
@@ -15,16 +15,16 @@
   <div class="form-group">
     <label for="">Content</label>
     <textarea class="form-control" rows="3" formControlName="content"></textarea>
-    <div style="font-size:14px" class="alert alert-danger" role="alert"
+    <div style="font-size:14px" class="badge badge-danger" role="alert"
       *ngIf="projectForm.hasError('required','content') && projectForm.get('content').touched">
       content: Không được để trống
     </div>
-    <div style="font-size:14px" class="alert alert-danger" role="alert"
+    <div style="font-size:14px" class="badge badge-danger" role="alert"
       *ngIf="projectForm.hasError('minlength','content') && projectForm.get('content').touched">
       content: Phải có ít nhất 10 ký tự
     </div>
   </div>
   <div style="text-align: center">
-    <button type="submit" class="btn btn-primary">ADD</button>
+    <button type="submit" [disabled]="projectForm.invalid" class="btn btn-primary">ADD</button>
   </div>
 </form>
