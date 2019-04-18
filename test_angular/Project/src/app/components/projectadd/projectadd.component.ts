@@ -32,7 +32,7 @@ export class ProjectaddComponent implements OnInit {
     this.projectService.addProject(this.projectForm.value).subscribe( data => {
      if(data && data.id)
      {
-      this.routerService.navigate(['list']);
+      this.routerService.navigate(['/list']);
      }
    });
  }

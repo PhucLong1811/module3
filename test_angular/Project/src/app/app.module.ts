@@ -11,6 +11,7 @@ import { ProjecteditComponent } from './components/projectedit/projectedit.compo
 import { ProjectlistComponent } from './components/projectlist/projectlist.component';
 import { HomeComponent } from './components/home/home.component';
 import { UndoneprojectComponent } from './components/undoneproject/undoneproject.component';
+import { ErrorValidateComponent } from './components/error-Validate/error-Validate.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { UndoneprojectComponent } from './components/undoneproject/undoneproject
     ProjectaddComponent,
     ProjecteditComponent,
     ProjectlistComponent,
+    ErrorValidateComponent,
     HomeComponent,
     UndoneprojectComponent
   ],

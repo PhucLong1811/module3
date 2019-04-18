@@ -1,4 +1,5 @@
-<form  (ngSubmit)="onEdit()" >
+<button type="submit" class="btn btn-group" style="margin-right:30px;" (click)="backClicked()"> &larr; back</button>
+<form  (ngSubmit)="onEdit()">
   <legend style="text-align: center; font-weight: bold;">Edit</legend>
   <div class="form-group">
     <label for="">Name</label>
@@ -9,6 +10,5 @@
     <textarea class="form-control" rows="3" [(ngModel)]="projects.content"
       [ngModelOptions]="{standalone:true}"></textarea>
   </div>
-  <button type="submit" class="btn btn-group" style="margin-right:30px;">back</button>
   <button type="submit" class="btn btn-primary" >Submit</button>
 </form>

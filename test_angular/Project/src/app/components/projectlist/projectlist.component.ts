@@ -17,7 +17,7 @@ export class ProjectlistComponent implements OnInit {
   public projects: Project[] = [];
 
   constructor(public projectService: ProjectService) {
-    this.jstoday = formatDate(this.today, 'dd-MM-yyyy hh:mm:ss a', 'en-US', '+0530');
+    this.jstoday = formatDate(this.today, 'dd-MM-yyyy', 'en-US', '+0530');
    }
 
   ngOnInit() {

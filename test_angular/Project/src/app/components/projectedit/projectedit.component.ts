@@ -4,6 +4,7 @@ import { Project } from 'src/app/modules/project.model';
 import { Params, Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ProjectService } from 'src/app/service/project.service';
+import {Location} from '@angular/common';
 
 
 @Component({
@@ -25,7 +26,8 @@ export class ProjecteditComponent implements OnInit {
       public projectService: ProjectService,
       public routerService: Router,
       public activatedRouteService: ActivatedRoute,
-      public formBuilder : FormBuilder
+      public formBuilder : FormBuilder,
+      private _location: Location
     ) { }
 
   ngOnInit() {
@@ -41,7 +43,9 @@ export class ProjecteditComponent implements OnInit {
       })
     });
   }
-
+  backClicked() {
+    this._location.back();
+  }
   onEdit() {
     this.subscriptionParams = this.projectService.updateProject(this.projects).subscribe((data: Project) => {
       this.routerService.navigate(['/']);
